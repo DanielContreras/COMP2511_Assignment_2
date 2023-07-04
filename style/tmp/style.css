@@ -1,0 +1,323 @@
+/** 
+ * Author: 		Daniel Contreras
+ * Course: 		COMP 2511
+ * Assignment: 	2
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans|Lato|Amaranth');
+
+/**
+ * Resets tall styles to nothing. Leave this in your file.
+ */
+html, body, div, span, article, header, footer, nav,
+h1, h2, h3, h4, h5, h6, p, ul, li, abbr, address {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/**
+  * Sets font being used and ensures that scrolling is
+  * allowable on all pages (otherwise margins were changing).
+  */
+html,
+body {
+	font-family: 'Lato', 'Droid Sans', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	background-color: #EAEAEA;
+	color: #585858;
+}
+
+/**
+ * Makes the entire container a flexbox with a column layout
+ */
+#container {
+	display: flex;
+	flex-direction: column;
+}
+
+/**
+ * Sets most of the defaults for the sidebar like, display type,
+ * fonts, sizing, and colors.
+ * 
+ */
+.sidebar {
+	display: flex;
+	position: fixed;
+	order: 1;
+	top: 0;
+	height: 100%;
+	width: 12%;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #003049;
+	color: white;
+	font-family: "Amaranth";
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+/**
+ * Provides the order and marginal spacing for the intro section
+ */
+#intro {
+	order: 2;
+	margin-left: 12%;
+}
+
+/**
+ * Provides the order and marginal spacing the next section
+ */
+#next {
+	order: 3;
+	margin-left: 12%;
+}
+
+/**
+ * Provides the order and marginal spacing for the article, 
+ * also centers all the content
+ */
+article {
+	text-align: center;
+	order: 4;
+	margin: 0 0 35px 12%;
+}
+
+/**
+ * sets the display to a flexbox and centers all footer content
+ * and sets fonts, colors.
+ */
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	order: 5;
+	height: 60px;
+	margin-left: 12%;
+	background-color: #333333;
+	font-family: 'Lato', 'Droid Sans', Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	font-size: 13px;
+}
+
+/**
+  * Sets a standard size for all images.
+  */
+img {
+	width: 250px;
+	height: 250px;
+}
+
+/**
+  * Gives the sidebar a attributes custom styling.
+  */
+.sidebar a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/**
+ * Gives the hover attribute custom coloring.
+ */
+.sidebar li:hover {
+	background-color: #007fb5;
+}
+
+/**
+ * Forces visited links to be the same color as they would
+ * otherwise be.
+ */
+.sidebar a:visited {
+	color: white;
+}
+
+/**
+ * Styling for hover attribute on visited links.
+ */
+a:visited:hover {
+	border: 1px solid #007fb5;
+}
+
+/**
+  * Custom effect for when the link is pressed. 
+  */
+.sidebar a:active {
+	top: 1px;
+}
+
+/**
+  * Gives the "Rescoures:" string padding to match the 
+  * rest of the menue.
+  */
+#resources h3 {
+	padding: 0 0 25px 15px;
+}
+
+/**
+  * the headers in the intro section are given a font size
+  * and padding to show that they are not part of the paragraphs.
+  */
+#intro h1,
+#intro h2 {
+	font-size: 20px;
+	padding-bottom: 20px;
+	font-weight: bold;
+}
+
+/**
+  * Gives a margin to the content of the next to make it look nicer.
+  * Also gives a border for desired look/feel.
+  */
+#next div {
+	margin: 35px;
+	border: 1px solid black;
+}
+
+/**
+  * Gives padding to h2 and p tags to give a less-cluttered look.
+  */
+#next h2,
+#next p {
+	padding: 0 15px 0 15px;
+}
+
+/**
+  * All the first paragraphs are going to get a 15px padding-top.
+  */
+#description1 p:first-of-type,
+#description2 p:first-of-type,
+#description3 p:first-of-type {
+	padding-top: 15px;
+}
+
+/**
+  * All the last paragraphs are going to get a 15px padding-top.
+  */
+#description1 p:last-of-type,
+#description2 p:last-of-type,
+#description3 p:last-of-type {
+	padding-bottom: 15px;
+}
+
+/**
+  * All headers in the descriptions get custom coloring and padding
+  */
+#description1 h2,
+#description2 h2,
+#description3 h2 {
+	background-color: #007fb5;
+	color: white;
+	border-bottom: 1px solid black;
+	padding: 15px 15px 15px 15px;
+}
+
+/**
+  * Stlying for the H2 on the article.
+  */
+article h2 {
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/**
+ * Remove the list default stylings and set the display 
+ * to inline-block
+ */
+article li {
+	list-style: none;
+	display: inline-block;
+}
+
+/**************************************
+ * General stylings
+ **************************************/
+
+/**
+ * Gives the header the necessary margins
+ */
+#intro header {
+	margin: 35px 0 0 35px;
+}
+
+/**
+ * Gives the overview ID the approriate margins
+ */
+#overview {
+	margin: 35px;
+}
+
+/**
+ * Gives the abstract ID the approriate margins
+ */
+#abstract {
+	margin: 0 35px 0 35px;
+}
+
+/**
+  * Removes the styling of the abbr
+  */
+abbr[title] {
+	text-decoration: none;
+}
+
+/**
+  * Removes this div
+  */
+footer>div {
+	display: none;
+}
+
+/**
+  * Inserts custom string after the address element.
+  */
+footer address:after {
+	content: "Styles by: Daniel Contreras";
+}
+
+/** 
+ * Center the address contents horizontally and vertically
+ */
+footer address {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+}
+
+/** 
+ * Places a special symbol to separate some information 
+ */
+footer address div:first-of-type:after,
+footer address div:nth-child(5):after,
+footer address div:nth-child(2):after {
+	content: " \2022";
+	color: red;
+}
+
+/** 
+ * Provides some margin space for footer objects
+ */
+footer div {
+	margin-right: 4px;
+}
+
+/**
+  * Gives a relative position to allow for the top attribute to 
+  * change. This is done for an effect when the link is clicked. 
+  * Also gives custom styling to all a attributes.
+  */
+a {
+	position: relative;
+	display: list-item;
+	padding: 25px 0 25px 15px;
+}
+
+/**
+ * removes all list stlying on the page.
+ */
+li {
+	list-style: none;
+}
